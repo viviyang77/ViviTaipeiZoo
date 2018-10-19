@@ -1,0 +1,8 @@
+*.xcscheme
+*.xcuserstate
+*.xcodeproj/xcuserdata
+xcschememanagement.plist
+*.orig
+*.xcworkspace/xcuserdata
+.xcbkptlist
+*.xcworkspace

@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  ZooBaseResponse.m
 //  ViviTaipeiZooPractice
 //
 //  Created by Vivi on 2018/10/19.
 //  Copyright © 2018 Vivi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZooBaseResponse.h"
 
-@interface ViewController : UIViewController
-
+@implementation ZooBaseResponse
 
 @end
-

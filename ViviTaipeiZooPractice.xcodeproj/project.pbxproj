@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		449A2BDB2179AE88002781EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BDA2179AE88002781EE /* AppDelegate.m */; };
-		449A2BDE2179AE88002781EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BDD2179AE88002781EE /* ViewController.m */; };
-		449A2BE12179AE88002781EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BDF2179AE88002781EE /* Main.storyboard */; };
 		449A2BE32179AE8A002781EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BE22179AE8A002781EE /* Assets.xcassets */; };
 		449A2BE62179AE8A002781EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BE42179AE8A002781EE /* LaunchScreen.storyboard */; };
 		449A2BE92179AE8A002781EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BE82179AE8A002781EE /* main.m */; };
 		449A2BF32179AE8A002781EE /* ViviTaipeiZooPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BF22179AE8A002781EE /* ViviTaipeiZooPracticeTests.m */; };
+		449A2C002179AFCF002781EE /* ZooTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BFE2179AFCF002781EE /* ZooTableViewController.m */; };
+		449A2C012179AFCF002781EE /* ZooTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BFF2179AFCF002781EE /* ZooTableViewController.xib */; };
+		44E7B4F52179B31200AE2CE7 /* ZooNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B4F42179B31200AE2CE7 /* ZooNavigationBar.m */; };
+		44E7B4F72179B31F00AE2CE7 /* ZooNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E7B4F62179B31F00AE2CE7 /* ZooNavigationBar.xib */; };
+		44E7B4FC2179B8FC00AE2CE7 /* ZooWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B4FB2179B8FC00AE2CE7 /* ZooWebManager.m */; };
+		44E7B5082179BDF000AE2CE7 /* ZooBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B5072179BDF000AE2CE7 /* ZooBaseResponse.m */; };
+		44E7B50D2179C14900AE2CE7 /* ZooResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B50A2179C14900AE2CE7 /* ZooResultsModel.m */; };
+		44E7B50E2179C14900AE2CE7 /* ZooTaipeiZooResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B50B2179C14900AE2CE7 /* ZooTaipeiZooResponse.m */; };
+		44E7B5132179C3E300AE2CE7 /* ZooBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B5122179C3E300AE2CE7 /* ZooBaseObject.m */; };
+		44E7B5162179C66900AE2CE7 /* ZooDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E7B5152179C66900AE2CE7 /* ZooDataManager.m */; };
+		4C59C1561119173188A96F93 /* Pods_ViviTaipeiZooPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDFCA586FCCDA4C45B20146 /* Pods_ViviTaipeiZooPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,12 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A03AD2CD4BD78DF781E5D7C /* Pods-ViviTaipeiZooPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViviTaipeiZooPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViviTaipeiZooPractice/Pods-ViviTaipeiZooPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		449A2BD62179AE88002781EE /* ViviTaipeiZooPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViviTaipeiZooPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449A2BD92179AE88002781EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		449A2BDA2179AE88002781EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		449A2BDC2179AE88002781EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		449A2BDD2179AE88002781EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		449A2BE02179AE88002781EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		449A2BE22179AE8A002781EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449A2BE52179AE8A002781EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449A2BE72179AE8A002781EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +47,28 @@
 		449A2BEE2179AE8A002781EE /* ViviTaipeiZooPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViviTaipeiZooPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		449A2BF22179AE8A002781EE /* ViviTaipeiZooPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViviTaipeiZooPracticeTests.m; sourceTree = "<group>"; };
 		449A2BF42179AE8A002781EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449A2BFD2179AFCF002781EE /* ZooTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooTableViewController.h; sourceTree = "<group>"; };
+		449A2BFE2179AFCF002781EE /* ZooTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooTableViewController.m; sourceTree = "<group>"; };
+		449A2BFF2179AFCF002781EE /* ZooTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooTableViewController.xib; sourceTree = "<group>"; };
+		44E7B4F32179B31200AE2CE7 /* ZooNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooNavigationBar.h; sourceTree = "<group>"; };
+		44E7B4F42179B31200AE2CE7 /* ZooNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooNavigationBar.m; sourceTree = "<group>"; };
+		44E7B4F62179B31F00AE2CE7 /* ZooNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooNavigationBar.xib; sourceTree = "<group>"; };
+		44E7B4FA2179B8FC00AE2CE7 /* ZooWebManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooWebManager.h; sourceTree = "<group>"; };
+		44E7B4FB2179B8FC00AE2CE7 /* ZooWebManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooWebManager.m; sourceTree = "<group>"; };
+		44E7B5062179BDF000AE2CE7 /* ZooBaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooBaseResponse.h; sourceTree = "<group>"; };
+		44E7B5072179BDF000AE2CE7 /* ZooBaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooBaseResponse.m; sourceTree = "<group>"; };
+		44E7B5092179C14900AE2CE7 /* ZooTaipeiZooResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooTaipeiZooResponse.h; sourceTree = "<group>"; };
+		44E7B50A2179C14900AE2CE7 /* ZooResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooResultsModel.m; sourceTree = "<group>"; };
+		44E7B50B2179C14900AE2CE7 /* ZooTaipeiZooResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooTaipeiZooResponse.m; sourceTree = "<group>"; };
+		44E7B50C2179C14900AE2CE7 /* ZooResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooResultsModel.h; sourceTree = "<group>"; };
+		44E7B50F2179C2E500AE2CE7 /* ZooDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooDefinition.h; sourceTree = "<group>"; };
+		44E7B5102179C2FD00AE2CE7 /* ZooPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooPrefixHeader.pch; sourceTree = "<group>"; };
+		44E7B5112179C3E300AE2CE7 /* ZooBaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooBaseObject.h; sourceTree = "<group>"; };
+		44E7B5122179C3E300AE2CE7 /* ZooBaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooBaseObject.m; sourceTree = "<group>"; };
+		44E7B5142179C66900AE2CE7 /* ZooDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooDataManager.h; sourceTree = "<group>"; };
+		44E7B5152179C66900AE2CE7 /* ZooDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooDataManager.m; sourceTree = "<group>"; };
+		4793D1D005C75366B946A4E2 /* Pods-ViviTaipeiZooPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViviTaipeiZooPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViviTaipeiZooPractice/Pods-ViviTaipeiZooPractice.release.xcconfig"; sourceTree = "<group>"; };
+		FFDFCA586FCCDA4C45B20146 /* Pods_ViviTaipeiZooPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViviTaipeiZooPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C59C1561119173188A96F93 /* Pods_ViviTaipeiZooPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FB7031D5D3337379B7F788D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFDFCA586FCCDA4C45B20146 /* Pods_ViviTaipeiZooPractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		449A2BCD2179AE88002781EE = {
 			isa = PBXGroup;
 			children = (
 				449A2BD82179AE88002781EE /* ViviTaipeiZooPractice */,
 				449A2BF12179AE8A002781EE /* ViviTaipeiZooPracticeTests */,
 				449A2BD72179AE88002781EE /* Products */,
+				E9446EF5D0622756A2943B64 /* Pods */,
+				0FB7031D5D3337379B7F788D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,13 +123,16 @@
 			children = (
 				449A2BD92179AE88002781EE /* AppDelegate.h */,
 				449A2BDA2179AE88002781EE /* AppDelegate.m */,
-				449A2BDC2179AE88002781EE /* ViewController.h */,
-				449A2BDD2179AE88002781EE /* ViewController.m */,
-				449A2BDF2179AE88002781EE /* Main.storyboard */,
+				44E7B50F2179C2E500AE2CE7 /* ZooDefinition.h */,
+				44E7B4F92179B8DF00AE2CE7 /* Manager */,
+				449A2C022179B00F002781EE /* Controller */,
+				449A2C032179B022002781EE /* View */,
+				44E7B4FD2179BA0200AE2CE7 /* Model */,
 				449A2BE22179AE8A002781EE /* Assets.xcassets */,
 				449A2BE42179AE8A002781EE /* LaunchScreen.storyboard */,
 				449A2BE72179AE8A002781EE /* Info.plist */,
 				449A2BE82179AE8A002781EE /* main.m */,
+				44E7B5102179C2FD00AE2CE7 /* ZooPrefixHeader.pch */,
 			);
 			path = ViviTaipeiZooPractice;
 			sourceTree = "<group>";
@@ -103,6 +146,61 @@
 			path = ViviTaipeiZooPracticeTests;
 			sourceTree = "<group>";
 		};
+		449A2C022179B00F002781EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				449A2BFD2179AFCF002781EE /* ZooTableViewController.h */,
+				449A2BFE2179AFCF002781EE /* ZooTableViewController.m */,
+				449A2BFF2179AFCF002781EE /* ZooTableViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		449A2C032179B022002781EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44E7B4F32179B31200AE2CE7 /* ZooNavigationBar.h */,
+				44E7B4F42179B31200AE2CE7 /* ZooNavigationBar.m */,
+				44E7B4F62179B31F00AE2CE7 /* ZooNavigationBar.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44E7B4F92179B8DF00AE2CE7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				44E7B4FA2179B8FC00AE2CE7 /* ZooWebManager.h */,
+				44E7B4FB2179B8FC00AE2CE7 /* ZooWebManager.m */,
+				44E7B5142179C66900AE2CE7 /* ZooDataManager.h */,
+				44E7B5152179C66900AE2CE7 /* ZooDataManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		44E7B4FD2179BA0200AE2CE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44E7B5112179C3E300AE2CE7 /* ZooBaseObject.h */,
+				44E7B5122179C3E300AE2CE7 /* ZooBaseObject.m */,
+				44E7B5062179BDF000AE2CE7 /* ZooBaseResponse.h */,
+				44E7B5072179BDF000AE2CE7 /* ZooBaseResponse.m */,
+				44E7B5092179C14900AE2CE7 /* ZooTaipeiZooResponse.h */,
+				44E7B50B2179C14900AE2CE7 /* ZooTaipeiZooResponse.m */,
+				44E7B50C2179C14900AE2CE7 /* ZooResultsModel.h */,
+				44E7B50A2179C14900AE2CE7 /* ZooResultsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9446EF5D0622756A2943B64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A03AD2CD4BD78DF781E5D7C /* Pods-ViviTaipeiZooPractice.debug.xcconfig */,
+				4793D1D005C75366B946A4E2 /* Pods-ViviTaipeiZooPractice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 449A2BF72179AE8A002781EE /* Build configuration list for PBXNativeTarget "ViviTaipeiZooPractice" */;
 			buildPhases = (
+				D9305697411E91CF5CA583A1 /* [CP] Check Pods Manifest.lock */,
 				449A2BD22179AE88002781EE /* Sources */,
 				449A2BD32179AE88002781EE /* Frameworks */,
 				449A2BD42179AE88002781EE /* Resources */,
+				3953D060E1F31D93A209A823 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +285,8 @@
 			files = (
 				449A2BE62179AE8A002781EE /* LaunchScreen.storyboard in Resources */,
 				449A2BE32179AE8A002781EE /* Assets.xcassets in Resources */,
-				449A2BE12179AE88002781EE /* Main.storyboard in Resources */,
+				44E7B4F72179B31F00AE2CE7 /* ZooNavigationBar.xib in Resources */,
+				449A2C012179AFCF002781EE /* ZooTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,13 +299,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3953D060E1F31D93A209A823 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ViviTaipeiZooPractice/Pods-ViviTaipeiZooPractice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViviTaipeiZooPractice/Pods-ViviTaipeiZooPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9305697411E91CF5CA583A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViviTaipeiZooPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		449A2BD22179AE88002781EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449A2BDE2179AE88002781EE /* ViewController.m in Sources */,
 				449A2BE92179AE8A002781EE /* main.m in Sources */,
+				44E7B5132179C3E300AE2CE7 /* ZooBaseObject.m in Sources */,
+				44E7B5162179C66900AE2CE7 /* ZooDataManager.m in Sources */,
+				44E7B4FC2179B8FC00AE2CE7 /* ZooWebManager.m in Sources */,
+				449A2C002179AFCF002781EE /* ZooTableViewController.m in Sources */,
+				44E7B50D2179C14900AE2CE7 /* ZooResultsModel.m in Sources */,
+				44E7B50E2179C14900AE2CE7 /* ZooTaipeiZooResponse.m in Sources */,
+				44E7B4F52179B31200AE2CE7 /* ZooNavigationBar.m in Sources */,
+				44E7B5082179BDF000AE2CE7 /* ZooBaseResponse.m in Sources */,
 				449A2BDB2179AE88002781EE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,14 +383,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		449A2BDF2179AE88002781EE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				449A2BE02179AE88002781EE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		449A2BE42179AE8A002781EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,10 +508,15 @@
 		};
 		449A2BF82179AE8A002781EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A03AD2CD4BD78DF781E5D7C /* Pods-ViviTaipeiZooPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q95229Y3N9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZooPrefixHeader.pch";
 				INFOPLIST_FILE = ViviTaipeiZooPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,10 +529,15 @@
 		};
 		449A2BF92179AE8A002781EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4793D1D005C75366B946A4E2 /* Pods-ViviTaipeiZooPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q95229Y3N9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZooPrefixHeader.pch";
 				INFOPLIST_FILE = ViviTaipeiZooPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
