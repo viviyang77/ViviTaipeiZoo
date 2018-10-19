@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		449A2BDB2179AE88002781EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BDA2179AE88002781EE /* AppDelegate.m */; };
+		449A2BDE2179AE88002781EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BDD2179AE88002781EE /* ViewController.m */; };
+		449A2BE12179AE88002781EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BDF2179AE88002781EE /* Main.storyboard */; };
+		449A2BE32179AE8A002781EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BE22179AE8A002781EE /* Assets.xcassets */; };
+		449A2BE62179AE8A002781EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449A2BE42179AE8A002781EE /* LaunchScreen.storyboard */; };
+		449A2BE92179AE8A002781EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BE82179AE8A002781EE /* main.m */; };
+		449A2BF32179AE8A002781EE /* ViviTaipeiZooPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 449A2BF22179AE8A002781EE /* ViviTaipeiZooPracticeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		449A2BEF2179AE8A002781EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 449A2BCE2179AE88002781EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 449A2BD52179AE88002781EE;
+			remoteInfo = ViviTaipeiZooPractice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		449A2BD62179AE88002781EE /* ViviTaipeiZooPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViviTaipeiZooPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		449A2BD92179AE88002781EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		449A2BDA2179AE88002781EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		449A2BDC2179AE88002781EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		449A2BDD2179AE88002781EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		449A2BE02179AE88002781EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		449A2BE22179AE8A002781EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		449A2BE52179AE8A002781EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		449A2BE72179AE8A002781EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449A2BE82179AE8A002781EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		449A2BEE2179AE8A002781EE /* ViviTaipeiZooPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViviTaipeiZooPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		449A2BF22179AE8A002781EE /* ViviTaipeiZooPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViviTaipeiZooPracticeTests.m; sourceTree = "<group>"; };
+		449A2BF42179AE8A002781EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		449A2BD32179AE88002781EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449A2BEB2179AE8A002781EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		449A2BCD2179AE88002781EE = {
+			isa = PBXGroup;
+			children = (
+				449A2BD82179AE88002781EE /* ViviTaipeiZooPractice */,
+				449A2BF12179AE8A002781EE /* ViviTaipeiZooPracticeTests */,
+				449A2BD72179AE88002781EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		449A2BD72179AE88002781EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				449A2BD62179AE88002781EE /* ViviTaipeiZooPractice.app */,
+				449A2BEE2179AE8A002781EE /* ViviTaipeiZooPracticeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		449A2BD82179AE88002781EE /* ViviTaipeiZooPractice */ = {
+			isa = PBXGroup;
+			children = (
+				449A2BD92179AE88002781EE /* AppDelegate.h */,
+				449A2BDA2179AE88002781EE /* AppDelegate.m */,
+				449A2BDC2179AE88002781EE /* ViewController.h */,
+				449A2BDD2179AE88002781EE /* ViewController.m */,
+				449A2BDF2179AE88002781EE /* Main.storyboard */,
+				449A2BE22179AE8A002781EE /* Assets.xcassets */,
+				449A2BE42179AE8A002781EE /* LaunchScreen.storyboard */,
+				449A2BE72179AE8A002781EE /* Info.plist */,
+				449A2BE82179AE8A002781EE /* main.m */,
+			);
+			path = ViviTaipeiZooPractice;
+			sourceTree = "<group>";
+		};
+		449A2BF12179AE8A002781EE /* ViviTaipeiZooPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				449A2BF22179AE8A002781EE /* ViviTaipeiZooPracticeTests.m */,
+				449A2BF42179AE8A002781EE /* Info.plist */,
+			);
+			path = ViviTaipeiZooPracticeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		449A2BD52179AE88002781EE /* ViviTaipeiZooPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449A2BF72179AE8A002781EE /* Build configuration list for PBXNativeTarget "ViviTaipeiZooPractice" */;
+			buildPhases = (
+				449A2BD22179AE88002781EE /* Sources */,
+				449A2BD32179AE88002781EE /* Frameworks */,
+				449A2BD42179AE88002781EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViviTaipeiZooPractice;
+			productName = ViviTaipeiZooPractice;
+			productReference = 449A2BD62179AE88002781EE /* ViviTaipeiZooPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		449A2BED2179AE8A002781EE /* ViviTaipeiZooPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449A2BFA2179AE8A002781EE /* Build configuration list for PBXNativeTarget "ViviTaipeiZooPracticeTests" */;
+			buildPhases = (
+				449A2BEA2179AE8A002781EE /* Sources */,
+				449A2BEB2179AE8A002781EE /* Frameworks */,
+				449A2BEC2179AE8A002781EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				449A2BF02179AE8A002781EE /* PBXTargetDependency */,
+			);
+			name = ViviTaipeiZooPracticeTests;
+			productName = ViviTaipeiZooPracticeTests;
+			productReference = 449A2BEE2179AE8A002781EE /* ViviTaipeiZooPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		449A2BCE2179AE88002781EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Vivi;
+				TargetAttributes = {
+					449A2BD52179AE88002781EE = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					449A2BED2179AE8A002781EE = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 449A2BD52179AE88002781EE;
+					};
+				};
+			};
+			buildConfigurationList = 449A2BD12179AE88002781EE /* Build configuration list for PBXProject "ViviTaipeiZooPractice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 449A2BCD2179AE88002781EE;
+			productRefGroup = 449A2BD72179AE88002781EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				449A2BD52179AE88002781EE /* ViviTaipeiZooPractice */,
+				449A2BED2179AE8A002781EE /* ViviTaipeiZooPracticeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		449A2BD42179AE88002781EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449A2BE62179AE8A002781EE /* LaunchScreen.storyboard in Resources */,
+				449A2BE32179AE8A002781EE /* Assets.xcassets in Resources */,
+				449A2BE12179AE88002781EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449A2BEC2179AE8A002781EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		449A2BD22179AE88002781EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449A2BDE2179AE88002781EE /* ViewController.m in Sources */,
+				449A2BE92179AE8A002781EE /* main.m in Sources */,
+				449A2BDB2179AE88002781EE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449A2BEA2179AE8A002781EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449A2BF32179AE8A002781EE /* ViviTaipeiZooPracticeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		449A2BF02179AE8A002781EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 449A2BD52179AE88002781EE /* ViviTaipeiZooPractice */;
+			targetProxy = 449A2BEF2179AE8A002781EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		449A2BDF2179AE88002781EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				449A2BE02179AE88002781EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		449A2BE42179AE8A002781EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				449A2BE52179AE8A002781EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		449A2BF52179AE8A002781EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		449A2BF62179AE8A002781EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		449A2BF82179AE8A002781EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViviTaipeiZooPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.viviyang.ViviTaipeiZooPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		449A2BF92179AE8A002781EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViviTaipeiZooPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.viviyang.ViviTaipeiZooPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		449A2BFB2179AE8A002781EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViviTaipeiZooPracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.viviyang.ViviTaipeiZooPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViviTaipeiZooPractice.app/ViviTaipeiZooPractice";
+			};
+			name = Debug;
+		};
+		449A2BFC2179AE8A002781EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViviTaipeiZooPracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.viviyang.ViviTaipeiZooPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViviTaipeiZooPractice.app/ViviTaipeiZooPractice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		449A2BD12179AE88002781EE /* Build configuration list for PBXProject "ViviTaipeiZooPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449A2BF52179AE8A002781EE /* Debug */,
+				449A2BF62179AE8A002781EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		449A2BF72179AE8A002781EE /* Build configuration list for PBXNativeTarget "ViviTaipeiZooPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449A2BF82179AE8A002781EE /* Debug */,
+				449A2BF92179AE8A002781EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		449A2BFA2179AE8A002781EE /* Build configuration list for PBXNativeTarget "ViviTaipeiZooPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449A2BFB2179AE8A002781EE /* Debug */,
+				449A2BFC2179AE8A002781EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 449A2BCE2179AE88002781EE /* Project object */;
+}
