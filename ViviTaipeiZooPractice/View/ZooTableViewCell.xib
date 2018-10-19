@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZooTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="771" height="543"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GX1-hb-25T">
+                    <rect key="frame" x="0.0" y="542" width="771" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ppE-Hw-qKG"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pmH-Yj-LVx">
+                    <rect key="frame" x="20" y="15" width="731" height="512"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5ky-li-a8F">
+                            <rect key="frame" x="0.0" y="0.0" width="479.5" height="434"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大貓熊館" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE9-HE-gZD">
+                                    <rect key="frame" x="0.0" y="0.0" width="479.5" height="18.5"/>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大貓熊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-EB-46t">
+                                    <rect key="frame" x="0.0" y="26.5" width="479.5" height="39.5"/>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="28"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giant Panda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fns-Jk-d0x">
+                                    <rect key="frame" x="0.0" y="74" width="479.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Behavior" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBk-Kt-7Pi">
+                                    <rect key="frame" x="0.0" y="103" width="479.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uje-Ta-L7f">
+                                    <rect key="frame" x="0.0" y="132" width="479.5" height="273"/>
+                                    <mutableString key="text">1. 大貓熊是獨居的動物，除了交配季節或雌性的育幼時期，牠們都是獨自居住的。\n2. 大貓熊性情溫和，很少主動攻擊，喜歡隱蔽，活動範圍通常在10-30公頃之內。會用體味、尿液和爪痕標記活動範圍。\n3. 以竹為主食(大約99%)，然而牠的牙齒、骨骼及腸子等的構造卻和食肉性動物一樣。為了補充足夠的營養，大貓熊不冬眠。\n4. 平常動作遲緩而笨拙，一但遇到豺、狼或豹等的襲擊時，則會迅速的爬樹避敵，以四肢抱著樹幹，可直達頂上。\n5. 大貓熊最活躍的時間在早晨和黃昏，但竹子所含熱量低，為減少能量的消耗，牠們每天的睡眠時間約10小時，剩餘時間則大多在覓食和進食。\n6. 受到森林砍伐、墾荒耕種、交通開發等人為活動的干擾，大貓熊的天然棲所早在1960年代已呈現大幅縮減與破碎化，野生族群殘存於長江上游各支流源頭、青藏高原東緣向四川盆地過度的6塊狹長地帶，個體被迫散居各地，對原本發情難、配種難、育幼難的大貓熊而言，保護其棲息地的工作刻不容緩。</mutableString>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查無資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-DZ-xpJ">
+                                    <rect key="frame" x="0.0" y="413" width="479.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vIN-ox-3l1">
+                            <rect key="frame" x="499.5" y="0.0" width="231.5" height="231.5"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vIN-ox-3l1" secondAttribute="height" multiplier="1:1" id="RzW-6F-JF2"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pmH-Yj-LVx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="1Jb-Wg-Ny4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GX1-hb-25T" secondAttribute="trailing" id="8G0-kz-STe"/>
+                <constraint firstItem="GX1-hb-25T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EOE-rJ-DUa"/>
+                <constraint firstItem="GX1-hb-25T" firstAttribute="top" secondItem="pmH-Yj-LVx" secondAttribute="bottom" constant="15" id="J1p-Zd-ciy"/>
+                <constraint firstItem="GX1-hb-25T" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="R2V-t2-3Zo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pmH-Yj-LVx" secondAttribute="trailing" constant="20" id="VO8-yf-FMK"/>
+                <constraint firstItem="pmH-Yj-LVx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="e9X-Rt-oaB"/>
+                <constraint firstItem="vIN-ox-3l1" firstAttribute="width" secondItem="GX1-hb-25T" secondAttribute="width" multiplier="0.3" priority="800" id="hfj-P0-fx7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="behaviorLabel" destination="WBk-Kt-7Pi" id="yvo-FG-4Xh"/>
+                <outlet property="englishNameLabel" destination="fns-Jk-d0x" id="qEf-O3-wtA"/>
+                <outlet property="interpretationLabel" destination="uje-Ta-L7f" id="jR4-fT-rsg"/>
+                <outlet property="locationLabel" destination="eE9-HE-gZD" id="g1e-ce-rH2"/>
+                <outlet property="nameLabel" destination="KBd-EB-46t" id="JkK-cz-NEC"/>
+                <outlet property="noDataLabel" destination="zwe-DZ-xpJ" id="tHt-iJ-tbI"/>
+                <outlet property="rightImageView" destination="vIN-ox-3l1" id="vBS-5n-VhB"/>
+            </connections>
+            <point key="canvasLocation" x="455.19999999999999" y="85.907046476761622"/>
+        </view>
+    </objects>
+</document>

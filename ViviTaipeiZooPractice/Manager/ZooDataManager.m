@@ -44,7 +44,7 @@ static NSString *taipeiZooURL = @"https://data.taipei/opendata/datalist/apiAcces
     
     NSDictionary *params = @{@"limit":@(limit), @"offset":@(offset)};
     [self.webManager getWithPath:taipeiZooURL parameters:params successBlock:^(ZooBaseResponse * _Nonnull response) {
-        ZooTaipeiZooResponse *zooResponse = [[ZooTaipeiZooResponse alloc] initWithDataDict:response.dataDict];
+        ZooTaipeiZooResponse *zooResponse = [[ZooTaipeiZooResponse alloc] initWithDataDict:response.dataDict[@"result"]];
         successBlock(zooResponse);
     } failureBlock:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
         failureBlock(task, error);

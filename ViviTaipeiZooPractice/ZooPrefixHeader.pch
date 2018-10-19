@@ -15,5 +15,6 @@
 #import "ZooBaseObject.h"
 #import "ZooDefinition.h"
 #import "ZooDataManager.h"
+#import "Masonry.h"
 
 #endif /* ZooPrefixHeader_pch */
