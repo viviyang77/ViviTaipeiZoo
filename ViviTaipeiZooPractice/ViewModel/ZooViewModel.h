@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSMutableArray <ZooResultsModel *> *resultsArray;
 
-- (void)fetchZooDataWithCompletion:(void(^)(BOOL success, NSString *errorMessage))completionBlock;
+- (void)fetchZooDataWithPrecondition:(void(^)(void))preconditionBlock
+                          completion:(void(^)(BOOL, NSString *))completionBlock;
 
 @end
 

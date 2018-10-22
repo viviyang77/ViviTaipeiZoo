@@ -18,6 +18,8 @@
 @property (assign, nonatomic) BOOL calculatedNavBarHeight;  // 是否依照不同status bar調整navigation bar高度
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *navigationBarHeightConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *spinnerView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @property (strong, nonatomic) ZooViewModel *viewModel;
 
@@ -35,7 +37,7 @@
 
 - (void)setUpData {
     self.viewModel = [ZooViewModel new];
-    [self fetchZooInformationData];
+    [self fetchZooInformationDataIfInitial:YES];
 }
 
 - (void)setUpUI {
@@ -43,12 +45,13 @@
 }
 
 - (void)setUpString {
-    
+    //TODO: Navigation bar title & text
 }
 
 - (void)viewWillLayoutSubviews {
     if (!self.calculatedNavBarHeight) {
-        self.navigationBarHeightConstraint.constant =
+        //TODO: iPhone X navigation bar
+//        self.navigationBarHeightConstraint.constant =
         self.calculatedNavBarHeight = YES;
     }
 }
@@ -56,7 +59,7 @@
 #pragma mark - UIScrollView
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
+    //TODO: Navigation bar scrolling
 }
 
 #pragma mark - UITableView
@@ -81,23 +84,50 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (indexPath.row == self.viewModel.resultsArray.count - 5) {
+        [self fetchZooInformationDataIfInitial:NO];
+    }
 }
 
 #pragma mark -
 
-- (void)fetchZooInformationData {
-    [SVProgressHUD show];
-    [self.viewModel fetchZooDataWithCompletion:^(BOOL success, NSString *errorMessage) {
+- (void)fetchZooInformationDataIfInitial:(BOOL)isInitial {
+    [self.viewModel fetchZooDataWithPrecondition:^{
+        [self showLoadingView:YES shouldShowHud:isInitial];
+
+    } completion:^(BOOL success, NSString *errorMessage) {
         if (success) {
             [self.tableView reloadData];
         }
-        [SVProgressHUD dismiss];
-        
+        [self showLoadingView:NO shouldShowHud:isInitial];
+
         if (errorMessage.length > 0) {
             [SVProgressHUD showErrorWithStatus:errorMessage];
         }
     }];
+}
+
+- (void)showLoadingView:(BOOL)shouldShow shouldShowHud:(BOOL)shouldShowHud {
+    if (shouldShow) {
+        // 顯示
+        if (shouldShowHud) {
+            [SVProgressHUD show];
+        }
+        else {
+            [self.spinner startAnimating];
+            self.tableView.tableFooterView = self.spinnerView;
+        }
+    }
+    else {
+        // 關閉
+        if (shouldShowHud) {
+            [SVProgressHUD dismiss];
+        }
+        else {
+            [self.spinner stopAnimating];
+            self.tableView.tableFooterView = nil;
+        }
+    }
 }
 
 @end

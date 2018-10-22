@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="navigationBar" destination="9N4-jy-K25" id="wF7-3t-aK6"/>
                 <outlet property="navigationBarHeightConstraint" destination="t64-5g-Cwe" id="MN4-ag-3fy"/>
+                <outlet property="spinner" destination="8UB-Xe-2WP" id="FIZ-Ot-gHy"/>
+                <outlet property="spinnerView" destination="CLb-90-6b1" id="fmt-Bh-GfC"/>
                 <outlet property="tableView" destination="ado-h0-8cy" id="ane-Ab-f0a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -50,6 +52,23 @@
                 <constraint firstItem="ado-h0-8cy" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="rk6-sK-JQT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <view contentMode="scaleToFill" id="CLb-90-6b1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8UB-Xe-2WP">
+                    <rect key="frame" x="177.5" y="12" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8UB-Xe-2WP" firstAttribute="centerX" secondItem="CLb-90-6b1" secondAttribute="centerX" id="m9e-PH-Xbh"/>
+                <constraint firstItem="8UB-Xe-2WP" firstAttribute="centerY" secondItem="CLb-90-6b1" secondAttribute="centerY" id="mq2-GN-b3z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ai4-23-XVV"/>
+            <point key="canvasLocation" x="1162" y="58"/>
         </view>
     </objects>
 </document>

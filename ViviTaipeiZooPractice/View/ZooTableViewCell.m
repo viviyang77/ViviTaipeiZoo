@@ -50,8 +50,6 @@
     }
 }
 
-
-
 - (void)updateData:(ZooResultsModel *)model {
     if (![model isKindOfClass:ZooResultsModel.class]) {
         return;
@@ -65,7 +63,7 @@
         self.rightImageView.hidden = NO;
         [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:model.a_Pic01_URL] placeholderImage:[UIImage imageNamed:@"placeholder"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             if (image) {
-                [UIView transitionWithView:self.rightImageView duration:0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                [UIView transitionWithView:self.rightImageView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                     self.rightImageView.image = image;
                 } completion:^(BOOL finished) {
                 }];

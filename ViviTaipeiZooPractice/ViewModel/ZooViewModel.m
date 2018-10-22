@@ -29,18 +29,20 @@ static NSInteger countPerPage = 30;
     return self;
 }
 
-- (void)fetchZooDataWithCompletion:(void(^)(BOOL, NSString *))completionBlock {
+- (void)fetchZooDataWithPrecondition:(void(^)(void))preconditionBlock
+                          completion:(void(^)(BOOL, NSString *))completionBlock {
     if (self.isFetchingData || (self.maxCount != NSNotFound && self.resultsArray.count >= self.maxCount)) {
-        if (completionBlock) {
-            completionBlock(NO, nil);
-        }
         return;
+    }
+    
+    if (preconditionBlock) {
+        preconditionBlock();
     }
     
     self.isFetchingData = YES;
     
     [[ZooDataManager sharedInstance] fetchZooInformationWithOffset:self.resultsArray.count limit:countPerPage successBlock:^(ZooTaipeiZooResponse *response) {
-        NSLog(@"SUCCEEDED, response: %@", response.dataDict);
+//        NSLog(@"SUCCEEDED, response: %@", response.dataDict);
         
         self.isFetchingData = NO;
         self.maxCount = response.count.integerValue;
@@ -56,7 +58,7 @@ static NSInteger countPerPage = 30;
         });
         
     } failureBlock:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"FAILED, error: %@", error);
+//        NSLog(@"FAILED, error: %@", error);
         
         self.isFetchingData = NO;
         if (completionBlock) {
