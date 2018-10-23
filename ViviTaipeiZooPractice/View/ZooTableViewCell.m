@@ -61,7 +61,7 @@
     // Image view
     if (model.a_Pic01_URL.length > 0) {
         self.rightImageView.hidden = NO;
-        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:model.a_Pic01_URL] placeholderImage:[UIImage imageNamed:@"placeholder"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:model.a_Pic01_URL] placeholderImage:[UIImage imageNamed:@"zooPlaceholder"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             if (image) {
                 [UIView transitionWithView:self.rightImageView duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                     self.rightImageView.image = image;
