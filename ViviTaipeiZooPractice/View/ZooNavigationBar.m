@@ -25,17 +25,20 @@
 
 - (CGFloat)minHeight {
     if (!_minHeight) {
-        _minHeight = 44.0;
+        _minHeight = 20.0;
     }
-    return _minHeight;
+    return [self heightByAddingStatusBarHeight:_minHeight];
 }
 
 - (CGFloat)maxHeight {
     if (!_maxHeight) {
-        _maxHeight = 64.0;
+        _maxHeight = 100.0;
     }
-    
-    CGFloat height = _maxHeight + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+    return [self heightByAddingStatusBarHeight:_maxHeight];
+}
+
+- (CGFloat)heightByAddingStatusBarHeight:(CGFloat)originalHeight {
+    CGFloat height = originalHeight + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
     CGFloat rootViewOriginY = CGRectGetMinY([UIApplication sharedApplication].delegate.window.rootViewController.view.frame);
     return height - rootViewOriginY;
 }
