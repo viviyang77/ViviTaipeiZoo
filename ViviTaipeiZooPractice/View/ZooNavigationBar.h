@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat minHeight;
 @property (assign, nonatomic) CGFloat maxHeight;
 
+- (void)updateSmallView:(UIView *)subview;
+- (void)updateLargeView:(UIView *)subview;
+- (void)updateSubviewTransparencyWithHeight:(CGFloat)navBarHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END

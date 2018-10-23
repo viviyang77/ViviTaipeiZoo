@@ -17,8 +17,11 @@ const CGFloat navBarAnimationDuration = 0.3;
 @interface ZooTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet ZooNavigationBar *navigationBar;
-@property (assign, nonatomic) BOOL calculatedNavBarHeight;  // 是否依照不同status bar調整navigation bar高度
+@property (assign, nonatomic) BOOL calculatedNavBarHeight;  // 是否已依照不同status bar調整navigation bar高度
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *navigationBarHeightConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *largeTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *smallTitleLabel;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *spinnerView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
@@ -45,6 +48,8 @@ const CGFloat navBarAnimationDuration = 0.3;
 
 - (void)setUpUI {
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [self.navigationBar updateSmallView:self.smallTitleLabel];
+    [self.navigationBar updateLargeView:self.largeTitleLabel];
 }
 
 - (void)setUpData {
@@ -56,21 +61,19 @@ const CGFloat navBarAnimationDuration = 0.3;
 }
 
 - (void)setUpString {
-    //TODO: Navigation bar title & text
+    self.largeTitleLabel.text = @"🐯臺北市立動物園🐼";
+    self.smallTitleLabel.text = @"🦁臺北市立動物園的動物們🐨";
 }
 
 - (void)viewWillLayoutSubviews {
     if (!self.calculatedNavBarHeight) {
         self.navigationBarHeightConstraint.constant = self.navigationBar.maxHeight;
+        [self.navigationBar updateSubviewTransparencyWithHeight:self.navigationBar.maxHeight];
         self.calculatedNavBarHeight = YES;
     }
 }
 
 #pragma mark - UIScrollView
-
-//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-//    NSLog(@">>> scrollViewWillBeginDragging");
-//}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;
@@ -83,8 +86,6 @@ const CGFloat navBarAnimationDuration = 0.3;
     CGFloat finalNavigationBarHeight = self.navigationBarHeightConstraint.constant;
     BOOL shouldSetOffsetToZero = NO;
     
-//    NSLog(@">>> y: %f, current height: %f", scrollView.contentOffset.y, finalNavigationBarHeight);
-
     if (offsetY > 0) {
         // 手向上滑⬆️
         // Navigation bar最高不可超過maxHeight
@@ -113,24 +114,19 @@ const CGFloat navBarAnimationDuration = 0.3;
     }
     
     self.navigationBarHeightConstraint.constant = finalNavigationBarHeight;
+    [self.navigationBar updateSubviewTransparencyWithHeight:finalNavigationBarHeight];
     
-//    NSLog(@"=== self.navigationBarHeightConstraint.constant: %f", self.navigationBarHeightConstraint.constant);
-
     if (shouldSetOffsetToZero) {
         scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, 0);
     }
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-//    NSLog(@">>> scrollViewWillEndDragging, target y: %f, velocity.y: %f", (*targetContentOffset).y, velocity.y);
-    
     self.willEndAtZero = (*targetContentOffset).y == 0;
     self.isScrollingUpwards = velocity.y < 0;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    NSLog(@">>> scrollViewDidEndDragging");
-    
     if (!decelerate) {
         // decelerate == NO表示user是慢慢滑動scrollView，被呼叫的時候scrollView已經停止滑動了，
         // 所以不會跑到scrollViewDidEndDecelerating
@@ -138,15 +134,8 @@ const CGFloat navBarAnimationDuration = 0.3;
     }
 }
 
-//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
-//    NSLog(@">>> scrollViewWillBeginDecelerating");
-//}
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     // User快速滑動scrollView後停止滑動時會呼叫到
-
-//    NSLog(@">>> scrollViewDidEndDecelerating, willEndAtZero: %d, isScrollingUpwards: %d", self.willEndAtZero, self.isScrollingUpwards);
-    
     [self adjustNavigationBarHeightWhenScrollingEnds];
 }
 
@@ -251,6 +240,7 @@ const CGFloat navBarAnimationDuration = 0.3;
         [self.view setNeedsLayout];
         [UIView animateWithDuration:navBarAnimationDuration animations:^{
             [self.view layoutIfNeeded];
+            [self.navigationBar updateSubviewTransparencyWithHeight:finalNavBarHeight];
         }];
     }
 }
@@ -260,6 +250,7 @@ const CGFloat navBarAnimationDuration = 0.3;
     [self.view setNeedsLayout];
     [UIView animateWithDuration:navBarAnimationDuration animations:^{
         [self.view layoutIfNeeded];
+        [self.navigationBar updateSubviewTransparencyWithHeight:self.navigationBar.maxHeight];
     }];
 }
 

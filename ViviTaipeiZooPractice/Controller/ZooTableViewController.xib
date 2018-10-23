@@ -12,8 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZooTableViewController">
             <connections>
+                <outlet property="largeTitleLabel" destination="y3A-i6-gBH" id="eBP-E9-BOC"/>
                 <outlet property="navigationBar" destination="9N4-jy-K25" id="wF7-3t-aK6"/>
                 <outlet property="navigationBarHeightConstraint" destination="t64-5g-Cwe" id="MN4-ag-3fy"/>
+                <outlet property="smallTitleLabel" destination="XjH-9m-E4Q" id="SF4-JB-Scx"/>
                 <outlet property="spinner" destination="8UB-Xe-2WP" id="FIZ-Ot-gHy"/>
                 <outlet property="spinnerView" destination="CLb-90-6b1" id="fmt-Bh-GfC"/>
                 <outlet property="tableView" destination="ado-h0-8cy" id="ane-Ab-f0a"/>
@@ -68,7 +70,30 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="ai4-23-XVV"/>
-            <point key="canvasLocation" x="1162" y="58"/>
+            <point key="canvasLocation" x="812" y="-173"/>
+        </view>
+        <view contentMode="scaleToFill" id="che-7L-yO7">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-i6-gBH">
+                    <rect key="frame" x="108" y="82" width="104" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-9m-E4Q">
+                    <rect key="frame" x="108" y="154" width="63" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="fqw-OE-TJR"/>
+            <point key="canvasLocation" x="780" y="214.54272863568218"/>
         </view>
     </objects>
 </document>
