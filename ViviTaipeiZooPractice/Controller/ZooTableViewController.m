@@ -12,6 +12,8 @@
 #import "ZooViewModel.h"
 #import "SVProgressHUD.h"
 
+const CGFloat navBarAnimationDuration = 0.3;
+
 @interface ZooTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet ZooNavigationBar *navigationBar;
@@ -22,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @property (strong, nonatomic) ZooViewModel *viewModel;
+
+// For navigation bar height transition
+@property (assign, nonatomic) CGFloat minNavBarHeight;
+@property (assign, nonatomic) CGFloat maxNavBarHeight;
 @property (assign, nonatomic) BOOL willEndAtZero;
 @property (assign, nonatomic) BOOL isScrollingUpwards;  // Upwards = back to top
 
@@ -42,6 +48,9 @@
 }
 
 - (void)setUpData {
+    self.minNavBarHeight = self.navigationBar.minHeight;
+    self.maxNavBarHeight = self.navigationBar.maxHeight;
+    
     self.viewModel = [ZooViewModel new];
     [self fetchZooInformationDataIfInitial:YES];
 }
@@ -60,7 +69,7 @@
 #pragma mark - UIScrollView
 
 //- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-//    NSLog(@"scrollViewWillBeginDragging");
+//    NSLog(@">>> scrollViewWillBeginDragging");
 //}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -72,9 +81,6 @@
     }
     
     CGFloat finalNavigationBarHeight = self.navigationBarHeightConstraint.constant;
-    
-    CGFloat maxHeight = self.navigationBar.maxHeight;
-    CGFloat minHeight = self.navigationBar.minHeight;
     BOOL shouldSetOffsetToZero = NO;
     
 //    NSLog(@">>> y: %f, current height: %f", scrollView.contentOffset.y, finalNavigationBarHeight);
@@ -82,22 +88,22 @@
     if (offsetY > 0) {
         // 手向上滑⬆️
         // Navigation bar最高不可超過maxHeight
-        finalNavigationBarHeight = MIN(maxHeight, MAX(minHeight, finalNavigationBarHeight - offsetY));
+        finalNavigationBarHeight = MIN(self.maxNavBarHeight, MAX(self.minNavBarHeight, finalNavigationBarHeight - offsetY));
         
         // Navigation bar要縮到最小的時候scrollView才能開始滑動，在那之前contentOffset.y都要是0
-        if (finalNavigationBarHeight > minHeight) {
+        if (finalNavigationBarHeight > self.minNavBarHeight) {
             shouldSetOffsetToZero = YES;
         }
     }
     else if (offsetY < 0) {
         // 手向下滑⬇️
-        if (finalNavigationBarHeight == maxHeight) {
+        if (finalNavigationBarHeight == self.maxNavBarHeight) {
             // Bouncing，不做任何動作
             return;
         }
         else {
             // Navigation bar最小不可小於minHeight
-            finalNavigationBarHeight = MIN(maxHeight, MAX(minHeight, finalNavigationBarHeight - offsetY));
+            finalNavigationBarHeight = MIN(self.maxNavBarHeight, MAX(self.minNavBarHeight, finalNavigationBarHeight - offsetY));
             
             // 如果已經知道等等會向上滑到0，就不改變offset.y
             if (!(self.willEndAtZero && self.isScrollingUpwards)) {
@@ -108,7 +114,7 @@
     
     self.navigationBarHeightConstraint.constant = finalNavigationBarHeight;
     
-//    NSLog(@"self.navigationBarHeightConstraint.constant: %f", self.navigationBarHeightConstraint.constant);
+//    NSLog(@"=== self.navigationBarHeightConstraint.constant: %f", self.navigationBarHeightConstraint.constant);
 
     if (shouldSetOffsetToZero) {
         scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, 0);
@@ -117,31 +123,31 @@
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
 //    NSLog(@">>> scrollViewWillEndDragging, target y: %f, velocity.y: %f", (*targetContentOffset).y, velocity.y);
-    if ((*targetContentOffset).y == 0) {
-        self.willEndAtZero = YES;
-    }
-    if (velocity.y < 0) {
-        self.isScrollingUpwards = YES;
+    
+    self.willEndAtZero = (*targetContentOffset).y == 0;
+    self.isScrollingUpwards = velocity.y < 0;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+//    NSLog(@">>> scrollViewDidEndDragging");
+    
+    if (!decelerate) {
+        // decelerate == NO表示user是慢慢滑動scrollView，被呼叫的時候scrollView已經停止滑動了，
+        // 所以不會跑到scrollViewDidEndDecelerating
+        [self adjustNavigationBarHeightWhenScrollingEnds];
     }
 }
 
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    NSLog(@">>> scrollViewDidEndDragging");
-//    self.startedDragging = NO;
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+//    NSLog(@">>> scrollViewWillBeginDecelerating");
 //}
 
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    NSLog(@">>> scrollViewDidEndDecelerating");
-//}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    // User快速滑動scrollView後停止滑動時會呼叫到
 
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-//    NSLog(@">>> scrollViewDidEndScrollingAnimation");
-    if (self.willEndAtZero && self.isScrollingUpwards) {
-        self.navigationBarHeightConstraint.constant = self.navigationBar.maxHeight;
-    }
+//    NSLog(@">>> scrollViewDidEndDecelerating, willEndAtZero: %d, isScrollingUpwards: %d", self.willEndAtZero, self.isScrollingUpwards);
     
-    self.willEndAtZero = NO;
-    self.isScrollingUpwards = NO;
+    [self adjustNavigationBarHeightWhenScrollingEnds];
 }
 
 #pragma mark - UITableView
@@ -210,6 +216,51 @@
             self.tableView.tableFooterView = nil;
         }
     }
+}
+
+- (void)adjustNavigationBarHeightWhenScrollingEnds {
+    if (self.willEndAtZero && self.isScrollingUpwards) {
+        // 即將向上滑到頂端，直接將navigation bar高度設定為maxHeight
+        
+        NSLog(@">>> 直接設定成max");
+        [self setNavigationBarHeightToMax];
+    }
+    else {
+        [self adjustNavigationBarHeightIfInBetween];
+    }
+    
+    self.willEndAtZero = NO;
+    self.isScrollingUpwards = NO;
+}
+
+- (void)adjustNavigationBarHeightIfInBetween {
+    CGFloat halfHeight = self.minNavBarHeight + (self.maxNavBarHeight - self.minNavBarHeight) / 2.0;
+    CGFloat currentNavBarHeight = self.navigationBarHeightConstraint.constant;
+    CGFloat finalNavBarHeight = currentNavBarHeight;
+    
+    if (currentNavBarHeight > self.minNavBarHeight &&
+        currentNavBarHeight < self.maxNavBarHeight) {
+        if (currentNavBarHeight >= halfHeight) {
+            finalNavBarHeight = self.maxNavBarHeight;
+        }
+        else {
+            finalNavBarHeight = self.minNavBarHeight;
+        }
+        
+        self.navigationBarHeightConstraint.constant = finalNavBarHeight;
+        [self.view setNeedsLayout];
+        [UIView animateWithDuration:navBarAnimationDuration animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+}
+
+- (void)setNavigationBarHeightToMax {
+    self.navigationBarHeightConstraint.constant = self.navigationBar.maxHeight;
+    [self.view setNeedsLayout];
+    [UIView animateWithDuration:navBarAnimationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 @end

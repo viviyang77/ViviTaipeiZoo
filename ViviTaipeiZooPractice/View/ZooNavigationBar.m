@@ -32,7 +32,7 @@
 
 - (CGFloat)maxHeight {
     if (!_maxHeight) {
-        _maxHeight = 100.0;
+        _maxHeight = 120.0;
     }
     return [self heightByAddingStatusBarHeight:_maxHeight];
 }
